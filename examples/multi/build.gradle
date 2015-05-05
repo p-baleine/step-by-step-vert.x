@@ -1,0 +1,31 @@
+apply plugin: 'java'
+
+version = '3.0.0-milestone4'
+
+if (!JavaVersion.current().java8Compatible) {
+    throw new IllegalStateException('''A Haiku:
+                                      |  This needs Java 8,
+                                      |  You are using something else,
+                                      |  Refresh. Try again.'''.stripMargin())
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'http://oss.sonatype.org/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compile 'io.vertx:vertx-core:3.0.0-milestone4'
+    compile 'io.vertx:vertx-apex:3.0.0-milestone4'
+    compile 'com.mchange:c3p0:0.9.5'
+    compile 'com.mchange:mchange-commons-java:0.2.9'
+    compile 'mysql:mysql-connector-java:5.1.35'
+    compile 'org.jdbi:jdbi:2.62'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
