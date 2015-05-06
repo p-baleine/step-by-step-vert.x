@@ -1,0 +1,9 @@
+{
+  "main": "com.example.myservice.services.ProductServiceVerticle",
+  "options": {
+    "config": {
+      "address": "myservice.product"
+    },
+    "worker": true
+  }
+}
