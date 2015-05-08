@@ -11,9 +11,9 @@ subprojects {
 
 project(':server') {
     dependencies {
-        compile 'io.vertx:vertx-apex:3.0.0-milestone4'
-        compile 'io.vertx:vertx-core:3.0.0-milestone4'
-        compile 'io.vertx:vertx-service-factory:3.0.0-milestone4'
+        compile 'io.vertx:vertx-apex:3.0.0-SNAPSHOT'
+        compile 'io.vertx:vertx-core:3.0.0-SNAPSHOT'
+        compile 'io.vertx:vertx-service-factory:3.0.0-SNAPSHOT'
         compile project(':services:productService')
     }
 }
@@ -33,17 +33,18 @@ project(':services:productService') {
         }
     }
     dependencies {
-        compile 'io.vertx:vertx-auth-service:3.0.0-milestone4'
-        compile 'io.vertx:vertx-codegen:3.0.0-milestone4'
-        compile 'io.vertx:vertx-core:3.0.0-milestone4'
-        compile 'io.vertx:vertx-lang-js:3.0.0-milestone4'
-        compile 'io.vertx:vertx-service-proxy:3.0.0-milestone4'
+        compile 'io.vertx:vertx-auth-service:3.0.0-SNAPSHOT'
+        compile 'io.vertx:vertx-codegen:3.0.0-SNAPSHOT'
+        compile 'io.vertx:vertx-core:3.0.0-SNAPSHOT'
+        compile 'io.vertx:vertx-lang-js:3.0.0-SNAPSHOT'
+        compile 'io.vertx:vertx-lang-ruby:3.0.0-SNAPSHOT'
+        compile 'io.vertx:vertx-service-proxy:3.0.0-SNAPSHOT'
         compile 'com.mchange:c3p0:0.9.5'
         compile 'com.mchange:mchange-commons-java:0.2.9'
         compile 'mysql:mysql-connector-java:5.1.35'
         compile 'org.jdbi:jdbi:2.62'
 
-        annotationProcessor 'io.vertx:vertx-codegen:3.0.0-milestone4'
+        annotationProcessor 'io.vertx:vertx-codegen:3.0.0-SNAPSHOT'
     }
 
     task cleanGenerated(type: Delete) {
